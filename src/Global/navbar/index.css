@@ -1,0 +1,472 @@
+/* Header start */
+.HeaderContainer {
+  width: 100%;
+}
+.HeaderContainer button {
+  width: 50%;
+  padding: 15px;
+  text-transform: uppercase;
+  background-color: white;
+  border: none;
+  /* border-left: solid; */
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+}
+.HeaderContainer .womenButton {
+  border-left: solid;
+  border-left: solid;
+}
+.HeaderContainer button:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.3s;
+}
+.HeaderContainer .activeHeaderButton {
+  background-color: black;
+  color: white;
+}
+/* Header start end */
+@media (max-width: 1120px) {
+  .HeaderContainer button {
+    font-size: 0.9rem;
+  }
+}
+
+/* menus start */
+.navContainer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-items: center;
+  align-items: center;
+  padding: 15px;
+}
+.navContainer .navLogo {
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+}
+.navContainer .NavLinks {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+.navContainer .NavLinks a {
+  color: black;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  transition: letter-spacing 0.3s;
+}
+
+.navContainer .NavLinks a:hover {
+  letter-spacing: 5.3px;
+}
+.navContainer .navIcons {
+  display: flex;
+  gap: 10px;
+}
+.navContainer .navIcons i {
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.navContainer .navIcons i:hover {
+  transform: scale(1.1);
+}
+/* menus end */
+
+/* Navbar for mobile screen and large screen */
+/* large screen */
+.MobScreen {
+  display: none;
+}
+
+@media (max-width: 1115px) {
+  .LargeScreen {
+    display: none;
+  }
+  .MobScreen {
+    display: block;
+  }
+  .mobNavContainer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobNavLogo img {
+    width: 200px;
+  }
+  .mobNavIcon i {
+    font-size: 1.5rem;
+  }
+  .MobNavIcons i {
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
+
+  .MobMenuList {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: -100%;
+    transition: transform 0.3s;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start;  */
+    padding-top: 20px; /* Add some top padding */
+    transition: left 0.3s;
+    z-index: 1;
+  }
+  @media (max-width: 699px) {
+    .MobMenuList {
+      width: 50%;
+    }
+  }
+  @media (max-width: 585px) {
+    .MobMenuList {
+      width: 70%;
+    }
+  }
+  
+  .MobMenuList.activeNav {
+    left: 0;
+  }
+
+  .close-icon {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .fa-xmark {
+    font-size: 24px;
+    color: #000000;
+  }
+  .mobNavLogoS {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .mobMenuTag {
+    margin-top: 40px;
+  }
+
+  .MobMenuList a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    color: #000000;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 0.7rem;
+  }
+
+  .MobMenuList a:hover {
+    background-color: #0a0708; /* Change background color on hover */
+    color: white;
+  }
+
+  .MobMenuList a span {
+    font-weight: bold;
+  }
+}
+/* large screen end */
+
+/* Navbar for mobile screen and large screen end */
+/* login Comp */
+.loginComp {
+  position: fixed;
+  width: 30%;
+  height: 100vh;
+  top: 0;
+  right: -100%;
+  background-color: white;
+  z-index: 1;
+  transition: right 0.3s;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in the total width */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.loginComp.activeLogin  {
+  right: 0;
+  overflow-y: hidden; /* Disable vertical scrolling when active */
+}
+
+@media(max-width: 918px){
+  .loginComp{
+    width: 40%;
+  }
+}
+@media(max-width: 670px){
+  .loginComp{
+    width: 50%;
+  }
+}
+@media(max-width: 500px){
+  .loginComp{
+    width: 80%;
+  }
+}
+
+
+
+.loginIcon i:hover {
+  transform: rotate(180deg);
+  color: red;
+}
+.loginComponent {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.email,
+.password {
+  width: 100%;
+}
+
+.email input,
+.password input {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  background-color: #f2f2f2;
+  color: #333333;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.email input::placeholder,
+.password input::placeholder {
+  color: #999999;
+  font-style: italic;
+}
+
+.actionButton button {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.actionButton button:hover {
+  background-color: white;
+  color: black;
+  border:1px solid  black;
+}
+
+.actionButton button:focus {
+  outline: none;
+  box-shadow: 0 0 5px black;
+
+}
+
+.signupLink p {
+  color: #999999;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: .8rem;
+}
+
+.signupLink p:hover {
+  text-decoration: underline;
+}
+
+
+/* login Comp end */
+/* cart Component */
+
+.cartComponent {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100vh;
+  background-color: white;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  padding: 20px;
+  z-index: 1;
+}
+@media (max-width: 1029px) {
+  .cartComponent {
+    width: 50%;
+    height: 100%;
+  }
+}
+@media (max-width: 760px) {
+  .cartComponent {
+    width: 70%;
+    height: 100%;
+  }
+}
+@media (max-width: 585px) {
+  .cartComponent {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.cartComponent.activeCart {
+  transform: translateX(0);
+}
+
+.cartCompContainer {
+  margin: 30px;
+}
+.cartContainer {
+  height: 60vh;
+  overflow-y: auto;
+}
+.cartComponentBodyContainer {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.CartCrossIcon i {
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.CartCrossIcon i:hover {
+  transform: rotate(180deg);
+}
+
+.cartComponentBody {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.cartProdTitle h2 {
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+.cartProdSize p {
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+.cartQuantityHeading {
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+.quantityContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.deleteIcon i {
+  font-size: 1rem;
+  margin-top: 7px;
+  color: red;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.deleteIcon i:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.cartProdQuantityBox {
+  margin-left: 5px;
+  width: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartProdQuantityBox button {
+  width: 50%;
+  height: 35px;
+  background-color: transparent;
+  border: none;
+}
+.cartProdQuantityBox button i {
+  /* Your existing styles here */
+  transition: transform 0.3s ease;
+}
+
+.cartProdQuantityBox button i:hover {
+  transform: rotate(180deg);
+}
+
+.cartQuantityNumber {
+  font-size: 1rem;
+}
+
+.cartBottomContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  position: absolute;
+  bottom: 0;
+  /* background-color: aqua; */
+  width: 100%;
+  right: 0;
+  padding: 50px;
+  background-color: white;
+}
+.totalAmount {
+  display: flex;
+  justify-content: space-between;
+}
+.totalAmountHeading h3 {
+  font-size: 1.5rem;
+}
+.totalAmountPrice h3 {
+  font-size: 1.5rem;
+}
+.totalAmountPrice span {
+  font-size: 1rem;
+  margin-right: 2px;
+}
+.checkoutButton button {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.checkoutButton button:hover {
+  background-color: white;
+  color: black;
+}
+/* cart Component end */
+
+
+/* cart notify */
+.cartNum{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  top: 60px;
+  font-size: .8rem;
+}
+/* cart notify */

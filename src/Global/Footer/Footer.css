@@ -1,0 +1,97 @@
+.footerContainer {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: #232323;
+  color: white;
+}
+
+.newsLetterDiv {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.newsLetter h2 {
+  font-size: 2.5rem;
+}
+.newsLetter p {
+  font-size: 0.8rem;
+}
+.subscribe input {
+  width: 300px;
+  height: 30px;
+  margin-top: 20px;
+}
+.subscribe button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+}
+
+.footerMainSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 20px;
+}
+.diners > h1 {
+  font-size: 2.5rem;
+}
+.diners > p{
+  font-size: .8rem;
+}
+.diners  i{
+  margin-left: 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.about, .help, .myAccount{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about, .help, .myAccount,  a{
+  font-size: .8rem;
+  color: white;
+  text-decoration: none;
+}
+.footerCopy {
+  display: flex;
+  justify-content: space-between;
+}
+.footerCopy p{
+  font-size: .8rem;
+}
+.footerCopy i{
+  font-size: 2rem;
+  margin-right: 20px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  /* Small screens */
+  .footerMainSection {
+    grid-template-columns: 1fr;
+    padding: 50px;
+  }
+  .newsLetterDiv {
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 30px;
+  }
+  .newsLetter h2 {
+    font-size: 2rem;
+  }
+  .subscribe input {
+    width: 100%;
+  }
+  .subscribe button {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Large screens */
+  .footerMainSection {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

@@ -1,0 +1,494 @@
+.dashboard {
+  display: flex;
+}
+
+.adminNavBar {
+  border-right: 1px solid black;
+  background-color: #ffffff;
+  width: 150px;
+}
+
+.pages {
+  flex: 1;
+  padding: 60px;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.adminNav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 30px;
+}
+
+.adminNav .navLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.adminNav .navLink i {
+  color: white;
+  font-size: 1.8rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  /* background-color: rgb(99, 4, 4); */
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.adminNav .navLink:hover i {
+  transform: rotate(360deg);
+}
+
+.names {
+  position: absolute;
+  top: 22px;
+  left: 80px;
+  font-size: 1.3rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 160px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  transform: translateY(-10px);
+}
+
+.link1:hover .name1,
+.link2:hover .name2,
+.link3:hover .name3,
+.link4:hover .name4,
+.link5:hover .name5,
+.link6:hover .name6 {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Landing page */
+.LandingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+}
+
+.LandingBoxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.todayOrders,
+.weekOrders,
+.monthOrders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.todayOrders:hover,
+.weekOrders:hover,
+.monthOrders:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.todayLabel,
+.weekLabel,
+.monthLabel {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  /* color: #777777; */
+}
+
+.todaySaleLabel,
+.weekSaleLabel,
+.monthSaleLabel {
+  font-size: 0.8rem;
+}
+
+.todaySaleAmount,
+.weekSaleAmount,
+.monthSaleAmount {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.todayOrderCount,
+.weekOrderCount,
+.monthOrderCount {
+  font-size: 0.9rem;
+}
+
+/* Existing CSS code for other elements */
+
+.recentOrdersTable {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recentOrdersLabel {
+  font-size: 2rem;
+  color: #333333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: rgba(0, 0, 0, 0.744);
+}
+
+thead th {
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+tbody td {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+tbody tr:hover {
+  background-color: #f4f4f4;
+}
+
+.orderImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.seeMoreButton {
+  background-color: black;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: capitalize;
+}
+
+.seeMoreButton:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+/* products list container */
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topRow .filters {
+  display: flex;
+  gap: 200px;
+}
+.topRow .filters .listCategory {
+  background-color: #333333;
+  width: 200px;
+  height: 30px;
+}
+.topRow .filters .listCategory select {
+  width: 100%;
+  height: 100%;
+}
+.topRow .searchBar {
+  background-color: #333333;
+  width: 300px;
+  height: 30px;
+}
+.topRow .searchBar input {
+  width: 80%;
+  height: 30px;
+}
+.topRow .searchBar button {
+  width: 20%;
+  height: 30px;
+}
+
+.topRow .addNewButt {
+  background-color: rgb(255, 126, 71);
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.topRow .addNewButt:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.editProdButton {
+  background-color: rgb(100, 45, 22);
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.editProdButton:hover {
+  background-color: white;
+  color: black;
+}
+.editProdButton {
+  position: relative;
+}
+.editTag {
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  background-color: rgb(255, 126, 71);
+  color: #fff;
+  padding: 3px;
+  border-radius: 4px;
+  padding: 8px 5px;
+
+  letter-spacing: 2px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.editProdButton:hover .editTag {
+  visibility: visible;
+  opacity: 1;
+}
+.delProdButton {
+  background-color: rgb(255, 0, 0);
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.delProdButton:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+/* products list container end */
+
+/* add & edit product container */
+.addEditProdContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.addEditProdContainer .titleInput input,
+.imageInput input,
+.descriptionInput input {
+  width: 100%;
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid #333333;
+  border-radius: 5px;
+}
+
+.categoriesTypeInput {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.sizeInputs > div {
+  display: flex;
+  gap: 5px;
+
+  
+}
+.sizeInputs button{
+  padding: 11px;
+  background-color: #000000;
+  color: white;
+  border: none;
+
+}
+
+
+.categoriesInputs select,
+.womenTypesInputs select,
+.typeInputs select {
+  width: 100%;
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid #333333;
+  border-radius: 5px;
+}
+
+.onSaleInput,
+.trendingInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.onSaleInput p,
+.trendingInput p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.onSaleInput input[type='checkbox'],
+.trendingInput input[type='checkbox'] {
+  transform: scale(1.5);
+}
+
+.imageInput p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.imageInput input[type='text'] {
+  width: 100%;
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid #333333;
+  border-radius: 5px;
+}
+
+.descriptionInput input[type='text'] {
+  width: 100%;
+  height: 120px;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid #333333;
+  border-radius: 5px;
+  resize: none;
+}
+
+.onSaleInput p,
+.trendingInput p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.onSaleInput p::before,
+.trendingInput p::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #333333;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.onSaleInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.onSaleInput p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.onSaleInput input[type='checkbox'] {
+  transform: scale(1.5);
+}
+
+.onSaleInput .salePriceInput {
+  display: none;
+}
+
+.onSaleInput.checked .salePriceInput {
+  display: block;
+  width: 200px;
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid #333333;
+  border-radius: 5px;
+}
+
+.labelInputs {
+  font-size: 1.2rem;
+}
+
+.SubEditButton button {
+  padding: 10px 80px;
+  border-radius: 10px;
+  background-color: #333333;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.SubEditButton button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Rest of the code remains the same */
+
+/* add & edit product container end */

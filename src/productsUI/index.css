@@ -1,0 +1,251 @@
+.productsPageContainer {
+  display: grid;
+  grid-template-columns: 20% 70%;
+  /* background-color: #007bff; */
+}
+
+.productsFilterContainer {
+  width: 100%;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.filterOption {
+  margin-bottom: 10px;
+}
+
+.filterOption label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.filterOption input[type='range'] {
+  width: 100%;
+  height: 8px;
+  background-color: #f2f2f2;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.filterOption input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #007bff;
+  cursor: pointer;
+}
+
+.filterOption input[type='range']::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.filterOption p {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.filterOption input[type='checkbox'] {
+  margin-right: 5px;
+}
+
+/* Add your desired eye-catching CSS styles for the filter options */
+
+.productListImages {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  width: 100%;
+  margin-left: 50px;
+  padding: 20px;
+  gap: 40px;
+}
+
+.mobFilter {
+  display: none;
+}
+
+.mobFilterOptions {
+  display: none;
+}
+
+@media (max-width: 1015px) {
+  .productsPageContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+ 
+  .productListImages {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 100%;
+    margin-left: 0px;
+    padding: 20px;
+    gap: 100px;
+    margin-right: 0px;
+  }
+  .largeFilter {
+    display: none;
+  }
+  .mobFilter {
+    display: block;
+  }
+  .filterIcon i {
+    font-size: 1.5rem;
+  }
+  .mobFilterOptions {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start off-screen on the left */
+    background-color: #f2f2f2;
+    width: 30%;
+    height: 100vh;
+    padding: 20px;
+    max-height: 100vh;
+    z-index: 1;
+    transition: left 0.3s;
+  }
+  
+  .mobFilterOptions.activeFilter {
+    left: 0; /* Move to the center */
+  }
+  
+  .filterCrossIcon i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .filterTag {
+    margin-top: 50px;
+  }
+
+  .filterOption {
+    margin-bottom: 0px;
+  }
+
+  .filterOption label {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .filterOption input[type='range'] {
+    width: 100%;
+    height: 20px;
+    background-color: #f2f2f2;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+
+  .filterOption input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #007bff;
+    cursor: pointer;
+  }
+
+  .filterOption input[type='range']::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+  }
+
+  .filterOption p {
+    margin-top: 0px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .filterOption input[type='checkbox'] {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 846px) {
+  .productListImages {
+    grid-template-columns: auto auto;
+  }
+  .mobFilterOptions {
+    padding: 20px;
+    width: 60%;
+  }
+}
+
+@media (max-width: 620px) {
+  .productListImages {
+    grid-template-columns: auto;
+  }
+}
+
+.productImageContainer {
+  padding: 15px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+
+}
+
+/* .productImage {
+  position: relative;
+  overflow: hidden;
+}
+
+.productImage img {
+  width: 290px;
+  height: 450px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.productImage:hover .hover-image,
+.productImage img:hover {
+  opacity: 1;
+  /* transform: scale(1.1); */
+  /* transition: opacity .3s; */
+/* }  */
+
+.bodyHeading {
+  margin-top: 5px;
+}
+
+.bodyHeading h3 {
+  font-size: 1rem;
+}
+
+.productPrice p {
+  font-size: 0.8rem;
+}
+
+.productSizes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.productSizes button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  border-style: outset;
+  transition: all 0.3s;
+}
+
+.productSizes button:hover {
+  background-color: black;
+  color: white;
+}

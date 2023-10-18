@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 62.5%;
+}
+.fade-in {
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+
+.homeContainer img {
+  width: 100%;
+}
+
+/* error */
+
+/*======================
+    404 page
+=======================*/
+
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: 'Arvo', serif;
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+}
+.contant_box_404 {
+  margin-top: -50px;
+}
+/* error */
